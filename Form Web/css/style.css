@@ -24,3 +24,50 @@ header h1 {
     color: black;
     padding: 25px;
 }
+
+.content {
+    max-width: 400px;
+    border: 1px solid rgb(90, 86, 86);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.headerCad {
+    height: 80px;
+    background: rgb(116, 113, 113);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerCad h1 {
+    color: black;
+    font-size: 25px;
+}
+
+.form-group, .form-button {
+    margin: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.form-group input[type="text"] {
+    border: 2px solid rgb(143, 125, 125);
+    width: 95%;
+    height: 25px;
+    outline: none;
+    padding-left: 5px;
+}
+
+.form-button button {
+    background: white;
+    color: black;
+    padding: 10px;
+    border: 0;
+    cursor: pointer;
+}
