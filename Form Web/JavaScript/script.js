@@ -1,21 +1,46 @@
-// Criando Variaveis
+// Criando Variáveis
 
 const nome = document.querySelector("#nome");
+const email = document.querySelector("#email");
+const telefone = document.querySelector("#telefone");
+
 const button = document.querySelector("button");
 const lista = document.querySelector(".lista");
 
-// Criando função
-// () => e function() msm coisa
+// Evento botão
 
 button.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log("Olá", nome.value);
-    const inputValue = nome.value;
-    const templateHTML = `<li>${inputValue}</li>`;
 
-    // Incluir itens no HTML
+    // Pegando valores
+    const nomeValue = nome.value;
+    const emailValue = email.value;
+    const telefoneValue = telefone.value;
+
+    // Validação simples
+    if (
+        nomeValue === "" ||
+        emailValue === "" ||
+        telefoneValue === ""
+    ) {
+        alert("Preencha todos os campos!");
+        return;
+    }
+
+    // Template HTML
+    const templateHTML = `
+        <li>
+            <strong>Nome:</strong> ${nomeValue} <br>
+            <strong>Email:</strong> ${emailValue} <br>
+            <strong>Telefone:</strong> ${telefoneValue}
+        </li>
+    `;
+
+    // Inserindo no HTML
     lista.innerHTML += templateHTML;
 
-    // Limpar campo
+    // Limpando inputs
     nome.value = "";
+    email.value = "";
+    telefone.value = "";
 });
